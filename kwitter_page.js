@@ -1,29 +1,14 @@
-//YOUR FIREBASE LINKS
-
-// var firebaseConfig = {
-//     apiKey: "AIzaSyCzLN0HzuNeOw_ad1Kk8jRNM6a_UBuO7kA",
-//     authDomain: "classtest-a5abb.firebaseapp.com",
-//     databaseURL: "https://classtest-a5abb-default-rtdb.firebaseio.com",
-//     projectId: "classtest-a5abb",
-//     storageBucket: "classtest-a5abb.appspot.com",
-//     messagingSenderId: "54590184475",
-//     appId: "1:54590184475:web:31c8219a5cb3746c8becbe"
-//   };
-//   // Initialize Firebase
-//   firebase.initializeApp(firebaseConfig);
-
-
-  var firebaseConfig = {
-    apiKey: "AIzaSyBg-gHqu_WrLlkhgyrvk3CW4rCeHeGFnEI",
-    authDomain: "apitesting-3a237.firebaseapp.com",
-    databaseURL: "https://apitesting-3a237-default-rtdb.firebaseio.com",
-    projectId: "apitesting-3a237",
-    storageBucket: "apitesting-3a237.appspot.com",
-    messagingSenderId: "924207625693",
-    appId: "1:924207625693:web:ff2c21f2ab9ebca3033234"
-  };
-  // Initialize Firebase
-  firebase.initializeApp(firebaseConfig);
+var firebaseConfig = {
+    apiKey: "AIzaSyDebulxZJo9yeWkGGMqTcPmc61KrYnARZo",
+    authDomain: "firedb-28565.firebaseapp.com",
+    databaseURL: "https://firedb-28565-default-rtdb.firebaseio.com",
+    projectId: "firedb-28565",
+    storageBucket: "firedb-28565.appspot.com",
+    messagingSenderId: "801004775252",
+    appId: "1:801004775252:web:2ca349bd05eff941918ac1"
+};
+// Initialize Firebase
+firebase.initializeApp(firebaseConfig);
 
 
 
@@ -42,9 +27,9 @@ function send() {
 }
 
 function getData() {
-    firebase.database().ref("/" + room_name).on('value', function (snapshot) {
+    firebase.database().ref("/" + room_name).on('value', function(snapshot) {
         document.getElementById("output").innerHTML = "";
-        snapshot.forEach(function (childSnapshot) {
+        snapshot.forEach(function(childSnapshot) {
             childKey = childSnapshot.key;
             childData = childSnapshot.val();
             if (childKey != "purpose") {
